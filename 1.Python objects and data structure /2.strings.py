@@ -24,5 +24,19 @@ print(mystring[::-1])
 newstring=mystring[8:]+"lmnopqrst"
 print(newstring)
 #String multiplication
+newstring='b'*10
+print(newstring)
+#String methods
+x='Hello world'
+print(x.upper())
+print(x.split())
+x='Hi this is a string'
+print(x.split('i'))
+#Formatting using .format() method
+print("This is a {1} {2} {0}".format('fox', 'quick', 'brown'))
+print('{a} {b} {c} {d} {e}'.format(a='My', b='name', c='is', d='Sezerano', e='Beni!!🏀'))
+result=0.121723434968
+print("The result is: {}".format(result))
+print("The result rounded off is: {r:.3f}".format(r=result))
 
 
