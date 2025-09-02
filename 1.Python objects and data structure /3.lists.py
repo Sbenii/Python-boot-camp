@@ -17,4 +17,18 @@ print(newlist.pop())#removing the last element
 print(newlist)
 print(Mylist.pop(4))
 print(Mylist)
+#Sorting a list
+Newlist=['a','f','v','c','d','z']
+Numlist=[3,2,6,1,8,0]
+print(f"Unsorted list: {Newlist}")
+print(f"Unsorted numbers: {Numlist}")
+Newlist.sort()
+Numlist.sort()
+print(f"Sorted list: {Newlist}")
+print(f"Sorted number: {Numlist}")
+#Reversing a string
+Newlist.reverse()
+Numlist.reverse()
+print(f"Reversed list: {Newlist}")
+print(f"Reversed numbers: {Numlist}")
 
