@@ -33,10 +33,16 @@ print(x.split())
 x='Hi this is a string'
 print(x.split('i'))
 #Formatting using .format() method
+print("{} {}".format("Welcome","back!!!"))
 print("This is a {1} {2} {0}".format('fox', 'quick', 'brown'))
 print('{a} {b} {c} {d} {e}'.format(a='My', b='name', c='is', d='Sezerano', e='Beni!!🏀'))
 result=0.121723434968
 print("The result is: {}".format(result))
 print("The result rounded off is: {r:.3f}".format(r=result))
+#Formatting using f string
+name='Beni🧩'
+print(f"Hello my name is {name}")
+age=20;
+print(f"{name} is {age} years old.")
 
 
