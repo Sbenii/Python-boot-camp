@@ -1,1 +1,5 @@
 print(1+1)
+print (4*4)
+print(7/4)
+print( 7%4)
+print(2**10)
