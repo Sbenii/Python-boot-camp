@@ -1,9 +1,8 @@
-{
-    // Enable GitDoc
-    "GitDoc: Enabled": true,
-  
-    // Commit delay: 10 minutes (600,000 ms)
-    "GitDoc: AutoCommit Delay": 600000,
+{ 
+  //enable GitDoc extension
+    "gitdoc.enabled": true,
+  // Commit delay: 10 minutes (600,000 ms)
+    "gitdoc: autocommit delay": 600000,
   
     // Push delay: 10 minutes (600,000 ms)
     "GitDoc: Autopush Delay": 600000,
@@ -19,6 +18,6 @@
   
     // Optional: commit even if warnings exist
     "GitDoc: Commit Validation Level": "warning",
-    "gitdoc.enabled": true
+    
   }
   
