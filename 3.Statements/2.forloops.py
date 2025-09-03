@@ -29,3 +29,20 @@ for i in d.items():
     print(i)#this will print keys with their values
 for (a,b) in d.items():
     print(b)#selecting what to print btn keys and values
+#pass, continue and break keywords
+x=[1,2,3]
+for i in x:
+    pass
+print("End of the script!!")
+
+x='Sammy'
+for i in x:
+    if i=='y' or i=='S':
+        continue
+    print(i)
+
+x="Benioeoeo"
+for i in x:
+    if i=='o':
+        break
+    print(i)
