@@ -7,8 +7,8 @@
     "GitDoc: Autopush": "afterDelay",
       
     // Delay in milliseconds before commit/push (5000 = 5s)
-    "GitDoc: AutoCommit Delay": 500000,
-    "GitDoc: Autopush Delay": 1000000,
+    "GitDoc: AutoCommit Delay": 600000,
+    "GitDoc: Autopush Delay": 600000,
       
     // Default commit message
     "GitDoc: Commit Message": "Auto commit from GitDoc",
