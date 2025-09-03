@@ -23,3 +23,4 @@ celcius=[0,10,20,34.5,100]
 fahrenheit=[((9/5)*temp+32) for temp in celcius]
 print(f"Temperature in celcius: {celcius}")
 print(f"Temperature in fahrenheit: {fahrenheit}")
+#or you can use t

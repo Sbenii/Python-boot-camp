@@ -1,23 +1,17 @@
 { 
   //enable GitDoc extension
     "gitdoc.enabled": true,
-  // Commit delay: 10 minutes (600,000 ms)
-    "gitdoc: autocommit delay": 600000,
-  
+   // Commit delay: 10 minutes (600,000 ms)
+    "gitdoc.autoCommitDelay": 600000,
     // Push delay: 10 minutes (600,000 ms)
-    "GitDoc: Autopush Delay": 600000,
-  
+    "gitdoc.autoPushDelay":60000,
     // Push automatically after commit
-    "GitDoc: Autopush": "afterDelay",
+    "gitdoc.autoPush": "afterDelay",
   
     // Default commit message
-    "GitDoc: Commit Message": "Auto commit from GitDoc",
-  
-    // Branch to push changes to
-    "GitDoc: Branch": "main",
-  
+    "gitdoc.commitMessageFormat": "Auto commit from GitDoc",
     // Optional: commit even if warnings exist
-    "GitDoc: Commit Validation Level": "warning",
+    "gitdoc.commitValidationLevel": "warning",
     
   }
   
