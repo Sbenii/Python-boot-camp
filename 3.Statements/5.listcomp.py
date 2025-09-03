@@ -35,7 +35,9 @@ print(f"Temperature in fahrenheit: {fah}")
 #nested loops
 nest=[]
 for x in [2,4,6]:
-    for y in [100,200,300]:
+    for y in [1,10,100]:
         nest.append(x*y)
-print(f"Nested loop list: {nest}")
-print()
+print(f"Nested loop: {nest}")
+#Alternative
+nest=[x*y for x in [2,4,6] for y in [1,10,100]]
+print(f"Nested loop: {nest}")
