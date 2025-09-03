@@ -5,3 +5,9 @@ with open("myfile.txt", "w+") as f:
     f.seek(0)  # go back to the beginning of the file
     myfile = f.read()
     print(myfile)
+with open("myfile.txt","+a") as f:
+    f.write("\nThis is the appending function!!")
+    f.seek(0)  # go back to the beginning of the file
+    myfile = f.read()
+    print(myfile)
+    

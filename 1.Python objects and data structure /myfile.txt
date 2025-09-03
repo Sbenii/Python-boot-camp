@@ -1,3 +1,4 @@
 Hello this is my first text file in python!!
 My name is Beni!!
 ----------------------
+This is the appending function!!
