@@ -18,6 +18,7 @@
     "GitDoc: Branch": "main",
   
     // Optional: commit even if warnings exist
-    "GitDoc: Commit Validation Level": "warning"
+    "GitDoc: Commit Validation Level": "warning",
+    "gitdoc.enabled": true
   }
   
