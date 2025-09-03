@@ -5,3 +5,5 @@ for i in mystring:
     mylist.append(i)
 print(mylist)    
 #Alternative and easy way
+mylist=[x for x in "Beni"]
+print(mylist)
