@@ -18,9 +18,24 @@ print(num)
 #Adding the if statement
 num=[x for x in range(0,11) if (x%2==0)]
 print(num)
+results=[x if x%2==0 else "Odd!!" for x in range (0,7)]
+print(results)
 #Using formulas
 celcius=[0,10,20,34.5,100]
 fahrenheit=[((9/5)*temp+32) for temp in celcius]
 print(f"Temperature in celcius: {celcius}")
 print(f"Temperature in fahrenheit: {fahrenheit}")
-#or you can use t
+#or you can use this way:
+cel=[0,10,20,30,40,50]
+fah=[]
+for i in cel:
+    fah.append((9/5)*i+32)
+print(f"Temperature in celcius: {cel}")
+print(f"Temperature in fahrenheit: {fah}")
+#nested loops
+nest=[]
+for x in [2,4,6]:
+    for y in [100,200,300]:
+        nest.append(x*y)
+print(f"Nested loop list: {nest}")
+print()
