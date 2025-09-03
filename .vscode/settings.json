@@ -1,23 +1,23 @@
 {
 
-  // Enable auto-commit
+    // Enable auto-commit
     "GitDoc: Enabled": true,
       
-        // Auto-push to GitHub
-        "GitDoc: Autopush": "afterDelay",
+    // Auto-push to GitHub
+    "GitDoc: Autopush": "afterDelay",
       
-        // Delay in milliseconds before commit/push (5000 = 5s)
-        "GitDoc: AutoCommit Delay": 5000,
-        "GitDoc: Autopush Delay": 10000,
+    // Delay in milliseconds before commit/push (5000 = 5s)
+    "GitDoc: AutoCommit Delay": 5000,
+    "GitDoc: Autopush Delay": 10000,
       
-        // Default commit message
-        "GitDoc: Commit Message": "Auto commit from GitDoc",
+    // Default commit message
+    "GitDoc: Commit Message": "Auto commit from GitDoc",
       
-        // Branch to push to
-        "GitDoc: Branch": "main",
+    // Branch to push to
+    "GitDoc: Branch": "main",
       
-        // Only commit error-free code (optional)
-        "GitDoc: Commit Validation Level": "warning"
-      }
+    // Only commit error-free code (optional)
+    "GitDoc: Commit Validation Level": "warning"
+      
       
 }
