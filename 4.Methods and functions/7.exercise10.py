@@ -8,3 +8,12 @@ def myfunc(stri):
     return result
 print(myfunc('Beni'))
 print(max(1,2))
+def blackjack(a,b,c):
+    summation=a+b+c
+    if summation<=21:
+        return summation
+    elif summation>21 and a==11 or b==11 or c==11 :
+        summation-=10
+        return summation
+    else:
+        print("BUST")
