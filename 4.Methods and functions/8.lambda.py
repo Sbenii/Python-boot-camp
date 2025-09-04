@@ -19,3 +19,8 @@ def even(num):
     return num%2==0
 my_nums=[1,2,3,4,5,6]
 print(list(filter(even,my_nums)))
+for i in filter(even,my_nums):
+    print(i)
+#Lambda expression
+squares=lambda num:num**2
+print(squares(3))
