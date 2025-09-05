@@ -1,35 +1,34 @@
-game_list=[0,1,2,3,4]
-def display(mli):
+game_list=[1,2,3]
+def display_game(game_list):
     print("Here is the current list: ")
-    print(mli)
-def gamer_choice():
-    choice='Wrong choice'
-    while choice not in ['0','1','2','3','4']:
-        choice=input("Pick a position in (0,1,2,3,4) : ")
-        if choice not in ['0','1','2','3','4']:
-            print("Sorry invalid input!!!")
+    print(game_list)
+def position_choice():
+    choice='W'
+    while choice not in ['0','1','2']:
+        choice=input("Please enter a position you want to change from 0-2: ")
+        if choice not in ['0','1','2']:
+            print("Sorry the position you entered is incorrect!!!")
     return int(choice)
-print(gamer_choice())
-def replacement(game_list,position):
-    user_replacemet=input("Enter a replacement for your position: ")
-    game_list[position]=user_replacemet
+def replacement_choice(game_list,position):
+    user_replacement=input("Enter a string to place at the position: ")
+    game_list[position]=user_replacement
     return game_list
-print(replacement(game_list,1))
-def gameon_choice():
-    choice='Wrong choice'
+def game_on():
+    choice='W'
+    gameon=True
     while choice not in ['y','n']:
         choice=input("Do you want to continue playing? (y or n): ")
         if choice not in ['y','n']:
-            print("Sorry, please choose y or n")
+            print("Please choose between y or n: ")
     if choice=='y':
-        return True
+        gameon
+        position_choice()
+        print( replacement_choice(game_list,position))
+        gameon=game_on()
     else:
-        return False
-game_on=True
-game_list=[0,1,2,3,4]
-while game_on:
-    display(gameon_choice)
-    position=gamer_choice()
-    game_list=replacement(game_list,position)
-    display(game_list)
-    game_on=gameon_choice()
+        gameon=False
+        print("Thanks for playing!!!")
+display_game(game_list)
+position=position_choice()
+print(replacement_choice(game_list,position))
+game_on()
