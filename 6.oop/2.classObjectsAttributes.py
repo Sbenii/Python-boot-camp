@@ -5,7 +5,6 @@ class Dog():
         self.my_attribute=mybreed
         self.name_attribute=name
         self.spot_attribute=spots
-
 #----->Methods
     def bark(self,number):
         print("Woof!! my name is {} and the number is: {}".format(self.name_attribute,number))
