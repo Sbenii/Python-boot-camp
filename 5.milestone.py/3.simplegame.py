@@ -1,3 +1,4 @@
+#Simple game of replacing a string in a given list
 game_list=[1,2,3]
 def display_game(game_list):
     print("Here is the current list: ")
