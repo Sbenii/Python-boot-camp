@@ -53,7 +53,7 @@ def player_choice(board):
         position=int(input("Choose a position from 1-9: "))
     return position
 def rematch():
-    choice=(input("Rematch? y or n"))
+    choice=(input("Rematch? y or n: "))
     return choice=='y'
 #-----------------------------------------------
 print("Welcome to the TIC TAC TOE!!")
@@ -75,14 +75,31 @@ while True:
             display_board(Tboard)
             position=player_choice(Tboard)
             place_marker(Tboard,player1_marker,position)
-            if win_check():
+            if win_check(Tboard,player1_marker):
                 display_board(Tboard)
                 print("Player 1 won!!!!")
                 game_on=False
             else:
                 if full_board_check(Tboard):
+                    display_board((Tboard))
                     print("It is a draw!!")
                     game_on=False
+                else:
+                    turn='Player2'
+        else:
+            display_board(Tboard)
+            position=player_choice(Tboard)
+            place_marker(Tboard,player2_marker,position)
+            if win_check(Tboard,player2_marker):
+                display_board(Tboard)
+                print("Player 2 won!!!!")
+                game_on=False
+            else:
+                if full_board_check(Tboard):
+                    display_board((Tboard))
+                    print("It is a draw!!")
+                    game_on=False
+                else: turn='Player1'
             
     if not rematch():
         break
