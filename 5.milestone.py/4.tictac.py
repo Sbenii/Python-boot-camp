@@ -4,7 +4,6 @@ def display_board(board):
     for i in range(1,10,3):
         print('|'+board[i] + '|' + board[i+1] + '|' + board[i+2]+'|')
         print('|-|'+'-|'+'-|')
-Tboard = ['X']*10
 #-----------------------------------------------
 def player_input():
     marker=''
@@ -41,3 +40,49 @@ def choose_first():
 def space_check(board,position):
     return board[position]==' '
 #-----------------------------------------------
+def full_board_check(board):
+    for i in range (0,10):
+        if space_check(board,i):
+            return False
+        else:
+            return True
+#-----------------------------------------------
+def player_choice(board):
+    position=0
+    while position not in [1,2,3,4,5,6,7,8,9] or not space_check(board,position):
+        position=int(input("Choose a position from 1-9: "))
+    return position
+def rematch():
+    choice=(input("Rematch? y or n"))
+    return choice=='y'
+#-----------------------------------------------
+print("Welcome to the TIC TAC TOE!!")
+while True:
+    Tboard = [' ']*10
+    player1_marker,player2_marker=player_input()
+    
+    turn =choose_first()
+    print(turn+'will go first!!!')
+    
+    play_game=input("Ready to play? y or n: ")
+    if play_game=='y':
+        game_on=True
+    else:
+        game_on=False
+    
+    while game_on:
+        if turn=='Player1':
+            display_board(Tboard)
+            position=player_choice(Tboard)
+            place_marker(Tboard,player1_marker,position)
+            if win_check():
+                display_board(Tboard)
+                print("Player 1 won!!!!")
+                game_on=False
+            else:
+                if full_board_check(Tboard):
+                    print("It is a draw!!")
+                    game_on=False
+            
+    if not rematch():
+        break
