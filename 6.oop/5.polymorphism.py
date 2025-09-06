@@ -8,8 +8,15 @@ class Cat():
         self.n=name
     def speak(self):
         return self.n + " says meowmeow!!"
-nike=Dog('Niko')
-Bund=Cat('Benji')
-my_animal=Dog(nike)
-print(nike.speak())
-print(Bund.speak())
+Niko=Dog('Niko')
+Benji=Cat('Benji')
+print(Niko.speak())
+print(Benji.speak())
+#-------------------------------
+for pet in [Niko,Benji]:
+    print(type(pet))
+    print(pet.speak())
+#-------------------------------
+def pet_speak(pet):
+    print(pet.speak())
+pet_speak(Niko)
