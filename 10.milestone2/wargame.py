@@ -29,22 +29,43 @@ class Player:
         self.all_cards=[]
     def remove_one(self):
         return self.all_cards.pop(0)
-    def add_one(self,newcards):
+    def add_card(self,newcards):
         if type(newcards)==type([]):
             self.all_cards.extend(newcards)
         else:
             self.all_cards.append(newcards)
     def __str__(self):
         return f'Player {self.name} has {len(self.all_cards)} cards'
+#-------------------------------------------------------------------------------------
+player1=Player('One')
+player2=Player('Two')
+
 new_deck=Deck()
 new_deck.shuffle()
-my_card=new_deck.deal_one()
-print(my_card)
-new_player=Player('Beni')
-new_player.add_one(my_card)
-Cardlist=new_player.all_cards
-print(new_player.all_cards[0])
-new_player.add_one([my_card,my_card,my_card])
-print(new_player)
-new_player.remove_one()
-print(new_player)
+
+for x in range(26):
+    player1.add_card(new_deck.deal_one())
+    player2.add_card(new_deck.deal_one())
+    
+counter=0
+game_on=True
+
+while game_on:
+    counter+=1
+    print(f"Round {counter}")
+    
+    if (len(player1.all_cards))==0:
+        print(f"Player {player1.name} is out of cards, player {player2.name} wins!!")
+        game_on=False
+        break
+    if (len(player2.all_cards))==0:
+        print(f"Player {player2.name} is out of cards, player {player1.name} wins!!")
+        game_on=False
+        break
+    
+    player1_cards=[]
+    player1_cards.append(player1.remove_one())
+    
+    player2_cards=[]
+    player2_cards.append(player2.remove_one())
+    
