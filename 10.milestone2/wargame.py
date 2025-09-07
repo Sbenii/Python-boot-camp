@@ -1,6 +1,7 @@
-import random
+from random import shuffle as sh
 suits=('Hearts','Diamonds','Spades','Clubs')
 ranks=('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
+
 Values={'Two':2,'Three':3,'Four':4,'Five':5,'Six':6,'Seven':7,'Eight':8,'Nine':9,'Ten':10,'Jack':11,'Queen':12,'King':13,'Ace':14}
 class Card:
     def __init__(self,suit,rank):
@@ -9,5 +10,22 @@ class Card:
         self.value=Values[rank]
     def __str__(self):
         return self.rank+" of "+self.suit
-two_hearts=Card('Hearts','Two')
-print(Values.keys())
+
+class Deck:
+    def __init__(self):
+        self.all_cards=[]
+        for suit in suits:
+            for rank in ranks:
+                create_card=Card(suit,rank)
+                self.all_cards.append(create_card)
+    def shuffle(self):
+        sh(self.all_cards)
+    def deal_one(self):
+        return self.all_cards.pop()
+
+new_deck=Deck()
+new_deck.shuffle()
+my_card=new_deck.deal_one()
+print(f"My card: {my_card}")  
+print(len(new_deck.all_cards),"cards")         
+
