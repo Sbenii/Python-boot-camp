@@ -55,11 +55,11 @@ while game_on:
     print(f"Round {counter}")
     
     if (len(player1.all_cards))==0:
-        print(f"Player {player1.name} is out of cards, player {player2.name} wins!!")
+        print(f"Player {player1.name} is out of cards, player! {player2.name} wins!!")
         game_on=False
         break
     if (len(player2.all_cards))==0:
-        print(f"Player {player2.name} is out of cards, player {player1.name} wins!!")
+        print(f"Player {player2.name} is out of cards, player! {player1.name} wins!!")
         game_on=False
         break
     
@@ -81,19 +81,19 @@ while game_on:
              at_war=False
         else:
             print("WAR!!")
-            if len(player1.all_cards)<3:
+            if len(player1.all_cards)<5:
                 print("Player one unable to declare war!!")
                 print("Player two wins!!")
                 game_on=False
                 break
             
-            if len(player2.all_cards)<3:
-                print("Player one unable to declare war!!")
-                print("Player two wins!!")
+            if len(player2.all_cards)<5:
+                print("Player two unable to declare war!!")
+                print("Player one wins!!")
                 game_on=False
                 break
             
             else:
-                for i in range (3):
+                for i in range (5):
                     player1_cards.append(player1.remove_one())
                     player2_cards.append(player2.remove_one())
