@@ -69,3 +69,31 @@ while game_on:
     player2_cards=[]
     player2_cards.append(player2.remove_one())
     
+    at_war=True
+    while at_war:
+        if player1_cards[-1].value>player2_cards[-1].value:
+             player1.add_card(player1_cards)
+             player1.add_card(player2_cards)
+             at_war=False
+        elif player2_cards[-1].value>player1_cards[-1].value:
+             player2.add_card(player2_cards)
+             player2.add_card(player1_cards)
+             at_war=False
+        else:
+            print("WAR!!")
+            if len(player1.all_cards)<3:
+                print("Player one unable to declare war!!")
+                print("Player two wins!!")
+                game_on=False
+                break
+            
+            if len(player2.all_cards)<3:
+                print("Player one unable to declare war!!")
+                print("Player two wins!!")
+                game_on=False
+                break
+            
+            else:
+                for i in range (3):
+                    player1_cards.append(player1.remove_one())
+                    player2_cards.append(player2.remove_one())
