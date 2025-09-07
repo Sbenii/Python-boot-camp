@@ -9,5 +9,5 @@ class textcap(unittest.TestCase):
         text='monty python'
         result=cap.cap_text(text)
         self.assertEqual(result,'Monty Python')
-if __name__='__main__':
+if __name__=='__main__':
     unittest.main()
