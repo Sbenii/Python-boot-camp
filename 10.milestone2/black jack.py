@@ -44,7 +44,9 @@ class Hand:
         self.aces = 0    # add an attribute to keep track of aces
     
     def add_card(self,card):
+        #card passeed in from Deck.deal()-->single_card(suit,rank)
         self.cards.append(card)
-    
+        self.value+=values[card.rank]
+        
     def adjust_for_ace(self):
         pass
