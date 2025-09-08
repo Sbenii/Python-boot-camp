@@ -12,8 +12,6 @@ class Card():
         self.value=values[rank]
     def __str__(self):
         return f"{self.rank} of {self.suit}"
-new_card=Card("Hearts","Two")
-print(new_card)
 
 class Deck:
     
@@ -135,3 +133,55 @@ def dealer_wins(player,dealer,chips):
     
 def push(player,dealer):
     print("Dealer and player Tie!! PUSH")
+
+while True:
+    print("WELCOME TO BLACK JACK!!!")
+    
+    deck=Deck()
+    deck.shuffle()
+    player_hand=Hand()
+    player_hand.add_card(deck.deal())
+    player_hand.add_card(deck.deal())
+    
+    Dealer_hand=Hand()
+    Dealer_hand.add_card(deck.deal())
+    Dealer_hand.add_card(deck.deal())
+    
+    player_chips=Chips()
+    
+    take_bet(player_chips)
+    
+    show_some(player_hand,Dealer_hand)
+    playing=True
+    while playing:
+        hit_or_stand(deck,player_hand)
+        
+        show_some(player_hand,Dealer_hand)
+        
+        if player_hand.value>21:
+            player_busts(player_hand,Dealer_hand,player_chips)
+            break
+    if player_hand.value<=21:
+        while Dealer_hand.value<17:
+            Hits(deck,Dealer_hand)
+        
+        show_all(player_hand,Dealer_hand)
+        
+        if Dealer_hand.value>21:
+            dealer_busts(player_hand,Dealer_hand,player_chips)
+        elif Dealer_hand.value>player_hand.value:
+            dealer_wins(player_hand,Dealer_hand,player_chips)
+        elif Dealer_hand.value<player_hand.value:
+            player_wins(player_hand,Dealer_hand,player_chips)
+        else:
+            push(player_hand,Dealer_hand)
+            
+    print("The player's remaining chips are : {}".format(player_chips.total))
+    
+    new_game=input("Would you like to play again? Enter y or n: ")
+    if new_game=="y":
+        playing=True
+        continue
+    else:
+        print('Thank you for playing!!!')
+        break
