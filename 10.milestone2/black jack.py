@@ -50,3 +50,12 @@ class Hand:
         
     def adjust_for_ace(self):
         pass
+
+test_deck=Deck()
+test_deck.shuffle()
+
+test_player=Hand()
+pulled_card_from_deck=test_deck.deal()
+print(pulled_card_from_deck)
+test_player.add_card(pulled_card_from_deck)
+print(test_player.value)
