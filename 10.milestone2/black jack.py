@@ -59,3 +59,6 @@ pulled_card_from_deck=test_deck.deal()
 print(pulled_card_from_deck)
 test_player.add_card(pulled_card_from_deck)
 print(test_player.value)
+#alternative
+test_player.add_card(test_deck.deal())
+print(test_player.value)
