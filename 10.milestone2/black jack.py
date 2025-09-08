@@ -107,9 +107,31 @@ def show_some(player,dealer):
         print(i)
 def show_all(player,dealer):
     
-    
-    
-    
+    print("\n Dealer's hand:")
+    for i in dealer.cards:
+        print(i)
+    print(f"Value of Dealer's hand: {dealer.value}")
     print("\n Player's hand:")
     for i in player.cards:
         print(i)
+    print(f"Value of player's hand: {player.value}")
+
+def player_busts(player,dealer,chips):
+    print("Player BUSTS!!Dealer wins!!")
+    chips.lose_bet()
+
+def player_wins(player,dealer,chips):
+    print ("Player wins!!")
+    chips.win_bet()
+
+def dealer_busts(player,dealer,chips):
+    print("Dealer BUSTS!! Player wins!")
+    chips.win_bet()
+
+    
+def dealer_wins(player,dealer,chips):
+    print("Dealer wins!!")
+    chips.lose_bet()
+    
+def push(player,dealer):
+    print("Dealer and player Tie!! PUSH")
