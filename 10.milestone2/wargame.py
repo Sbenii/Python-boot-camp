@@ -97,3 +97,11 @@ while game_on:
                 for i in range (5):
                     player1_cards.append(player1.remove_one())
                     player2_cards.append(player2.remove_one())
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
