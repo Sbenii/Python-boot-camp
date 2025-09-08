@@ -91,7 +91,25 @@ def hit_or_stand(deck,hand):
             Hits(deck,hand)
         elif x[0].lower()=='s':
             print("Player chooses to stand! Dealer's turn!")
+            playing=False
         else:
             print("Wrong input please enter 'h' or 's'!!")
-            break
+            continue
+        break
+
+def show_some(player,dealer):
+    print("\n Dealer's Hand:")
+    print("First card hidden!!")
+    print(dealer.cards[1])
     
+    print("\n Player's hand:")
+    for i in player.cards:
+        print(i)
+def show_all(player,dealer):
+    
+    
+    
+    
+    print("\n Player's hand:")
+    for i in player.cards:
+        print(i)
