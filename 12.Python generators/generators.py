@@ -34,5 +34,4 @@ print(next(word_iter))
 print(next(word_iter))
 print(next(word_iter))
 print(next(word_iter))
-print(next(word_iter))
 
