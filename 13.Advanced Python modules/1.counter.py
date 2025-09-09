@@ -7,4 +7,3 @@ mylist=('aaaaaaaaabbbbbannnnnaaaiiiiiaoooo')
 print(Counter(mylist))
 sentence='How many times does each word comes in this sentence?'
 print(Counter(sentence.split()))
-sentence2='Hello'
