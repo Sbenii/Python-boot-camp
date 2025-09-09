@@ -23,7 +23,6 @@ for i in simple_gen():
 g=simple_gen()
 print(next(g))
 print(next(g))
-print(next(g))
 #---------------------------------------------------
 word='Hello'
 for x in word:
