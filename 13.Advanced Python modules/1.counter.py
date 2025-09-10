@@ -10,4 +10,4 @@ mylist=('aaaaaaaaabbbbbannnnnaaaiiiiiaoooo')
 c=Counter(mylist)
 print(c)
 print(c.most_common(2))#---->returns the most recurring item
-print(list(c))
+print(list(c)) 
