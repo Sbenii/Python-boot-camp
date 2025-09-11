@@ -14,3 +14,6 @@ comp_file.close()
 
 zip_obj=zipfile.ZipFile('Compressed_file.zip','r')
 zip_obj.extractall('Extracted_content')
+
+import os
+print(os.getcwd())
