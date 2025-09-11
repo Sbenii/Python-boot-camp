@@ -1,10 +1,8 @@
 import requests
 result=requests.get("https://www.example.com/")
-'''
+
 print(type(result))
 print(result.text)
-'''
-
 
 import bs4
 soup=bs4.BeautifulSoup(result.text,'lxml')
