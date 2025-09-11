@@ -1,2 +1,2 @@
 import shutil
-dir_to_zip=""
+shutil.unpack_archive("/Users/beni/Documents/Skills/Machine Learning/Python/Complete-Python-3-Bootcamp-master/12-Advanced Python Modules/08-Advanced-Python-Module-Exercise/unzip_me_for_instructions.zip",'','zip')
