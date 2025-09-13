@@ -28,4 +28,7 @@ for x in range(1,51):
      else:
          continue
      
-print('Products with a two star rating:',two_star_titles)
+print('Products with a two star rating:')
+for n in range (len(two_star_titles)):
+    print(two_star_titles[n])
+    
