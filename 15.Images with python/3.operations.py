@@ -17,5 +17,7 @@ y=800
 h=1257
 croped_mac=mac.crop((x,y,w,h))
 mac.paste(im=croped_mac,box=(0,0))
-mac.resize
-mac.show()
+rotated_mac=mac.rotate(90)
+rotated_mac.show()
+resized_mac=mac.resize((1280,400))
+resized_mac.show()
