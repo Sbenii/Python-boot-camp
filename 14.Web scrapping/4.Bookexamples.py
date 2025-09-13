@@ -1,21 +1,21 @@
 #Get a title of a book with a two star rating on books.toscrape.com
 import requests
 import bs4
+import time
 base_url='https://books.toscrape.com/catalogue/page-{}.html'
-page_number=12
-print(base_url.format(page_number))
 
 '''
+page_number=12
+print(base_url.format(page_number))
 example=products[0]
 print(example.select('.star-rating.Three'))
 print(example.select('a'))
 print(example.select('a')[1])
 print(example.select('a')[1]['title'])
 '''
-
 #Final deliverables
 two_star_titles=[]
-
+start_time=time.time()
 for x in range(1,51):
     page_number=x
     res=requests.get(base_url.format(page_number))
@@ -30,5 +30,8 @@ for x in range(1,51):
      
 print('Products with a two star rating:')
 for n in range (len(two_star_titles)):
-    print(two_star_titles[n])
+    print(f'Book{n}:{two_star_titles[n]}')
+end_time=time.time()
+elapsed_time=end_time-start_time
+print(f'\nThe total time to webscrape books.toscrape.com: {elapsed_time}')
     
