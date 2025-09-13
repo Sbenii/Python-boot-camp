@@ -17,4 +17,4 @@ Authors_unique=set(authors)
 Final_list_of_unique_authors=list(Authors_unique)
 
 for item in range (len(Final_list_of_unique_authors)):
-    print(f'Author{item}: {Final_list_of_unique_authors[item]}')
+    print(f'Author{item+1}: {Final_list_of_unique_authors[item]}')
